@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "636523581815",
+    "project_id": "zk-financial-note",
+    "storage_bucket": "zk-financial-note.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636523581815:android:c3cbdff3323c82added172",
+        "android_client_info": {
+          "package_name": "com.munir_atef.zk_note"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636523581815-6jmuggkit0usg740j85sfpt36oieg3i6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.munir_atef.zk_note",
+            "certificate_hash": "c8dd7c7ba00538a5f0bb520383e601ba74293a19"
+          }
+        },
+        {
+          "client_id": "636523581815-ctusgoitf8ljvfhon9lbovmvd3pgms9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhoN-_rimIuNX1ginkYOGUY2Ev3tyNv5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636523581815-cni2po4s3300e11k8quh5imuo7c6lf1f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

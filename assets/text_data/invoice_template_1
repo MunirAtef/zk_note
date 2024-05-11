@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Invoice</title>
+<style>
+* {
+border: 0;
+box-sizing: content-box;
+margin: 0;
+padding: 0;
+}
+h1 { font: bold 100% sans-serif; letter-spacing: 0.5em; text-align: center; text-transform: uppercase; }
+table { font-size: 75%; table-layout: fixed; width: 100%; }
+table { border-collapse: separate; border-spacing: 2px; }
+th, td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
+th, td { border-radius: 0.25em; border-style: solid; }
+th { background: #EEE; border-color: #BBB; }
+td { border-color: #DDD; }
+html { font: 16px/1 'Open Sans', sans-serif; overflow: auto; padding: 0.5in; }
+html { background: #999; cursor: default; }
+body { box-sizing: border-box; margin: 0 auto; overflow: hidden; padding: 0.5in 0.5in 0 0.5in; width: 8.5in;
+background: #FFF; border-radius: 1px; box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+min-height: 60em; height: min-content;
+display: flex;
+flex-direction: column;
+}
+header { margin: 0 0 1em; }
+header:after { clear: both; content: ""; display: table; }
+header h1 { background: #000; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 0.5em 0; }
+article, address, .meta, .inventory { margin: 0 0 3em; }
+article:after { clear: both; content: ""; display: table; }
+article h1 { clip: rect(0 0 0 0); position: absolute; }
+address { float: left; font-size: 125%; font-weight: bold; }
+#client-company { font-size: 0.7em; }
+.meta { float: right; width: 36%; }
+.meta:after { clear: both; content: ""; display: table; }
+.meta th { width: 40%; }
+.meta td { width: 60%; }
+.inventory { clear: both; width: 100% }
+.inventory th { font-weight: bold; text-align: center; }
+.inventory th { background-color: #333; color: white; }
+.inventory .even-cell { background-color: #e7e7e7; }
+aside {
+border-top: 2px solid;
+padding: 1em 0;
+text-align: center;
+margin-top: auto;
+width: 100%;
+height: 4.5em;
+}
+#contact { font-weight: bold; color: purple; margin: 1em; display: inline-flex}
+a {
+text-decoration: none;
+color: blue;
+margin: 0.5em;
+background-color: #e7e7e7;
+padding: 0.2em 0.5em;
+border-radius: 1em;
+}
+.highlighted-name {
+font-weight: bold;
+text-decoration: underline;
+}
+@media print {
+* { -webkit-print-color-adjust: exact; }
+html { background: none; padding: 0; }
+body { box-shadow: none; margin: 0; }
+span:empty { display: none; }
+}
+@page { margin: 0; }
+</style>
+</head>
+<body>
+<header><h1 id="invoice-type">Invoice</h1></header>
+<article>
+<address>
+<p id="my-company"></p><br/>
+<p id="client-company"></p>
+</address>
+<table class="meta">
+<tr>
+<th>Invoice No.</th>
+<td id="invoice-num"></td>
+</tr>
+<tr>
+<th>Invoice Date</th>
+<td id="invoice-date"></td>
+</tr>
+<tr>
+<th>Amount Due</th>
+<td id="invoice-amount"></td>
+</tr>
+</table>
+<table class="inventory">
+<thead>
+<tr>
+<th>Item</th>
+<th>Unit price</th>
+<th>Quantity</th>
+<th>Total price</th>
+</tr>
+</thead>
+<tbody id="items-body">
+</tbody>
+</table>
+</article>
+<aside>
+<div>
+<p>This invoice sent from <span class="highlighted-name">ZK Financial note app</span>
+that developed by <span class="highlighted-name">Munir M. Atef</span></p>
+</div>
+<div id="links">
+<p id="contact">CONTACT THE DEVELOPER</p>
+<a href="https://wa.me/+201146721499" target="_blank">WhatsApp</a>
+<a href="https://www.facebook.com/munir-atef.52" target="_blank">Facebook</a>
+<a href="mailto:munir.atef1729@gmail.com?to=&subject=&body=Hi Munir, " target="_blank">Gmail</a>
+<a href="https://www.linkedin.com/in/munir-m-atef-573255215" target="_blank">Linkedin</a>
+</div>
+</aside>
+<script>
+let invoice =

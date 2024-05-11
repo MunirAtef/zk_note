@@ -1,0 +1,23 @@
+;
+let itemsBody = document.getElementById("items-body");
+document.getElementById("invoice-type").innerHTML = invoice.type + " INVOICE";
+document.getElementById("my-company").innerHTML = invoice.companyName;
+document.getElementById("client-company").innerHTML = invoice.clientType + " name: " + invoice.clientName;
+document.getElementById("invoice-num").innerHTML = invoice.invoiceNum;
+document.getElementById("invoice-date").innerHTML = invoice.date;
+document.getElementById("invoice-amount").innerHTML = invoice.totalAmount + " EGP";
+for (let i = 0; i < invoice.items.length; i++) {
+let item = invoice.items[i];
+let itemRow = document.createElement("tr");
+itemRow.className = i%2 === 0? "even-cell": "odd-cell";
+itemRow.innerHTML = `
+<td>${item.name}</td>
+<td>${item.price} EGP</td>
+<td>${item.count} ${item.unit}</td>
+<td>${item.price * item.count} EGP</td>
+`;
+itemsBody.appendChild(itemRow);
+}
+</script>
+</body>
+</html>
